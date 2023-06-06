@@ -6,12 +6,12 @@ namespace  C__Project
     {
         static void Main(string[] args)
         {
-            Random r = new Random();
+            Random r = new();
             
             int winNumber = r.Next(0, 100);
             
             bool win = false;
-            do
+            while(!win)
             {
                 Console.WriteLine("Enter a number to guess!");
                 string s = Console.ReadLine()!;
@@ -30,7 +30,7 @@ namespace  C__Project
                 }
                 Console.WriteLine(result);
                 
-            } while (win == false);
+            }
            
             Console.ReadLine();
         }
